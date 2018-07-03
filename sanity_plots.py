@@ -24,6 +24,9 @@ file.close()
 for column in df:
     name = list(df[column])
     plt.hist(df[column], alpha = 0.3)
+    plt.title('Hist '+ column);
+    plt.xlabel(column); 
+    plt.ylabel('Count' + column);
     plt.savefig(os.path.join(my_path, "hist_{}.png".format(column)))
 
 """
